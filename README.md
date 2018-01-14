@@ -1,2 +1,2 @@
 # handwritten_digit_recognition
-Handwritten digit recognition using convolutional neural network using python, opencv and tensorflow.
+Handwritten digit recognition based on convolutional neural network using python, opencv and tensorflow.
