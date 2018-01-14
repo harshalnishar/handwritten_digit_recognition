@@ -1,6 +1,6 @@
 import tensorflow as tf
 import numpy as np
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 import cv2
 
 import argparse
@@ -10,7 +10,7 @@ import mnist_model
 
 parser = argparse.ArgumentParser()
 
-parser.add_argument('--image', type=str, default='test_image.jpg',
+parser.add_argument('--image', type=str, default='./test_data/test_image.jpg',
                     help='Path to the image you want to test')
 
 FLAGS = parser.parse_args()
@@ -46,12 +46,12 @@ img_threshold1 = cv2.adaptiveThreshold(img_downscale1, 255, cv2.ADAPTIVE_THRESH_
 img_prep1 = cv2.bitwise_not(img_threshold1)
 img_prep1 = (img_prep1 / 255).astype('float32')
 
-plt.gray()
-plt.subplot(2, 2, 1), plt.imshow(img_blurred1)
-plt.subplot(2, 2, 2), plt.imshow(img_erode1)
-plt.subplot(2, 2, 3), plt.imshow(img_downscale1)
-plt.subplot(2, 2, 4), plt.imshow(img_threshold1)
-plt.show()
+#plt.gray()
+#plt.subplot(2, 2, 1), plt.imshow(img_blurred1)
+#plt.subplot(2, 2, 2), plt.imshow(img_erode1)
+#plt.subplot(2, 2, 3), plt.imshow(img_downscale1)
+#plt.subplot(2, 2, 4), plt.imshow(img_threshold1)
+#plt.show()
 
 # Placeholder for output prediction
 x = tf.placeholder(shape = [1, 28 , 28, 1], dtype = tf.float32)
