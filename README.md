@@ -9,5 +9,5 @@ To infer your image with my trained model,
 
 - Run following command,
   
-    python3 mninst_eval.py --image=<PATH_TO_YOUR_IMAGE_FILE>
+    `python3 mninst_eval.py --image=<PATH_TO_YOUR_IMAGE_FILE>`
   
